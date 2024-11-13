@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Reporting System</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.x/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x/firebase-firestore.js"></script>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Välkommen till Garanti-Städ</h2>
+        <h3>Logga in för att rapportera ditt projekt</h3>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="login-button">Login</button>
+        <p id="error-message"></p>
+    </div>
+
+    <div id="report-container" style="display:none;">
+        <h2>Report Your Project</h2>
+        <textarea id="project-report" placeholder="Describe your project..."></textarea>
+        <button id="submit-report-button">Submit Report</button>
+    </div>
+
+    <div id="admin-panel" style="display:none;">
+        <h2>Admin Panel</h2>
+        <div id="reports-list"></div>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
